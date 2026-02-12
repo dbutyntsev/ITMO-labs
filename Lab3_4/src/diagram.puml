@@ -1,0 +1,64 @@
+@startuml
+
+interface Hireable{
+    +beHired(): String
+}
+
+abstract class Shorty {
+    #name: String
+    #mood: Mood
+    +talk()
+    +getName(): String
+    +getMood(): Mood
+}
+
+class Client {
+    -lastOrder: Order
+    -List<Dish> eatenDishes
+    +eat(): String
+    +order(Dish type, boolean isSalted)
+}
+
+class Donut {
+    +hasMoney(): void
+    +explainSaltUsage(): void
+    +instructSaltConsumption(): void
+}
+
+class Owner {
+    -restaurantBalance: double
+    -List<Hireable> staff
+    +hire(Hireable person)
+    +chekProfit(): String
+    +getBalance(): double
+    +getStaff(): List<Hireable>
+}
+
+class Waiter {
+    +takeOrder(Order order)
+}
+
+class Chef {
+    +cook(Order order): String
+}
+
+enum Dish{
+    +getName(): String
+    +isSalted(): String
+}
+
+record Order {}
+
+
+Shorty <|-- Owner
+Shorty <|-- Client
+Client <|-- Donut
+Hireable <|-- Chef
+Hireable <|-- Waiter
+Shorty <|-- Chef
+Shorty <|-- Waiter
+
+@enduml
+
+
+
