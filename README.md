@@ -4,3 +4,7 @@ This repository contains my academic projects, lab works, and learning materials
 
 ## Stack:
 * Java
+* Python
+* C#
+* PostgreSQL
+  
