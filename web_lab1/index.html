@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Лабораторная работа №1</title>
+</head>
+<body>
+    <table id="layout">
+            <tr>
+                <td id="header" colspan="2">
+                    <h1>Бутынцев Даниил Константинович</h1>
+                    <p>Группа: <span class="info">P3213</span></p>
+                    <p>Вариант: <span class="info">12699</span></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="graph-cell">
+                    <canvas id="graph" width="400" height="400"></canvas>
+                </td>
+
+                <td id="form-cell">
+                    <form id="point-form" novalidate>
+                        <table>
+                            <tr>
+                                <td>X:</td>
+                                <td>
+                                    <button type="button" class="x-btn" data-x="-2">-2</button>
+                                    <button type="button" class="x-btn" data-x="-1.5">-1.5</button>
+                                    <button type="button" class="x-btn" data-x="-1">-1</button>
+                                    <button type="button" class="x-btn" data-x="-0.5">-0.5</button>
+                                    <button type="button" class="x-btn" data-x="0">0</button>
+                                    <button type="button" class="x-btn" data-x="0.5">0.5</button>
+                                    <button type="button" class="x-btn" data-x="1">1</button>
+                                    <button type="button" class="x-btn" data-x="1.5">1.5</button>
+                                    <button type="button" class="x-btn" data-x="2">2</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="y">Y:</label></td>
+                                <td><input type="text" id="y" name="y" placeholder="Введите значение (-3...5)"></td>
+                            </tr>
+                            <tr>
+                                <td>R:</td>
+                                <td>
+                                    <label><input type="radio" name="r" value="1" > 1</label>
+                                    <label><input type="radio" name="r" value="1.5" > 1.5</label>
+                                    <label><input type="radio" name="r" value="2" > 2</label>
+                                    <label><input type="radio" name="r" value="2.5" > 2.5</label>
+                                    <label><input type="radio" name="r" value="3" > 3</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" id="error-box"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <button type="submit">Добавить точку</button>
+                                    <button type="button" id="clear-btn">Очистить результаты</button>
+                                </td>                                
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="results-cell" colspan="2">
+                    <table id="results-table">
+                        <thead>
+                            <tr>
+                                <th>X</th>
+                                <th>Y</th>
+                                <th>R</th>
+                                <th>Попадание</th>
+                                <th>Дата и время</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-body">
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+    </table>
+    <script src="js/script.js"></script>
+</body>
+</html>
